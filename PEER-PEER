@@ -1,0 +1,63 @@
+1.
+
+Aim and Theory
+Aim:
+The main aim of this case study is to understand how Peer-to-Peer (P2P) communication works in the context of distributed file-sharing systems, specifically focusing on the BitTorrent protocol. We will analyze the underlying principles, advantages, and communication procedures that make P2P communication efficient and effective in such systems.
+
+
+Theory of P2P Communication:
+Peer-to-Peer Communication is a decentralized communication model where peers (users or systems) communicate directly with each other rather than relying on a central server.
+In a P2P network, each participant acts as both a client and a server. Each peer shares resources (such as files, bandwidth, and storage) with others in the network without needing a central authority or server to manage the communication.
+Distributed File Sharing systems like BitTorrent employ the P2P model to break large files into smaller chunks and distribute these chunks among peers. Peers can download and upload file chunks simultaneously, improving efficiency and speed in the file-sharing process.
+Decentralization is key in P2P networks. Instead of using a central server to store and distribute files, P2P networks distribute the file across multiple nodes (peers), where each peer can contribute to sharing different parts of the file.
+
+
+2.
+
+
+Step 1: File Request and Peer Discovery
+You want to send a file, so you connect your devices via Bluetooth or cable. Your devices find each other and are ready to share.
+
+Step 2: File Piece Distribution
+The file is split into smaller pieces. Your device starts sending parts to your friend’s device, while also receiving pieces from them if they are sending a file too.
+
+Step 3: Choking/Unchoking Mechanism
+If your device isn't sending enough data, your friend’s device might stop sending parts (choking). If it's sharing actively, your device gets priority (unchoking).
+
+Step 4: Piece Verification
+Each part of the file is checked to ensure it's correct. If a piece is wrong, it’s resent until everything is verified.
+
+Step 5: File Completion
+Once all parts are received and verified, the file is complete and ready to use, with both devices either stopping or continuing to share.
+
+This is similar to how files are shared in peer-to-peer networks.
+
+
+
+[Tracker]
+|
+v
+[Peer 1 (Has pieces)]
+|
+v
+[Peer 2 (Requests pieces)]
+|
++---+---+---+
+| | | |
+v v v v
+[Uploads piece] [Downloads piece]
+| | | |
+v v v v
+[Peer 3 (Shares pieces with P1, P2)]
+|
+v
+[Peer N (Completes file)]
+|
+v
+[Reassembled File]
+
+
+
+
+Conclusion
+This case study demonstrates how Peer-to-Peer (P2P) communication in systems like BitTorrent allows efficient, decentralized file sharing. By leveraging concepts such as swarming, tit-for-tat, and choking/unchoking, P2P networks enable users to share large files without overloading any central server. The result is a more resilient, scalable, and fast method of transferring data across the internet.
